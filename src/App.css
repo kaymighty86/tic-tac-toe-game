@@ -1,0 +1,10 @@
+.main_container{
+    width: 100%;
+    max-width: 30rem;
+    background-color: var(--background);
+    padding: 1.5rem 1rem;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    margin: 0px auto;
+}
+
