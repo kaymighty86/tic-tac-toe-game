@@ -1,0 +1,36 @@
+.playerDetails{
+    display:inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 1.2rem;
+    background-color: rgba(255, 209, 134, 0.1);
+    box-sizing: border-box;
+}
+
+.playerDetails>p{
+    margin: 0px;
+    height: fit-content;
+}
+
+.playerDetails>button{
+    border: none;
+    height: fit-content;
+    font-size: x-small;
+    color: var(--accent1-color);
+    background-color: unset;
+}
+
+.playerDetails>button:hover{
+    color: var(--text-light);
+}
+
+.playerDetails>.editableText{
+    width: 6rem;
+}
+
+/*CURRENT TURN STYLING PROPERTIES*/
+.currentTurn{
+    border: 2px solid var(--accent1-color);
+    color: var(--accent1-color);
+}

@@ -1,0 +1,31 @@
+.editableText{
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    box-sizing: border-box;
+}
+
+.isEditable{
+    border-bottom: 2px solid var(--accent1-color);
+}
+
+.editableText>input,.editableText>p{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    font-size: small;
+}
+
+.editableText>p{
+    margin: 0px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.editableText>input{
+    border: none;
+    outline: none;
+    background-color: unset;
+    color: white;
+}

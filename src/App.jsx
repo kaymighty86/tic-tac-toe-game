@@ -1,16 +1,20 @@
 import "./App.css";
 
-import EditableText from "./components/EditableText";
+import PlayersSection from "./components/PlayersSection";
+import GameBoard from "./components/GameBoard";
+import GameManager from "./contexts/GameManager";
 
 function App() {
 
   return (
     <main>
-      <section className="main_container">
-        <EditableText defaultValue="Player 1" />
-        <EditableText defaultValue="Player 2" />
-      </section>
-      --INPUT LOG--
+      <GameManager>
+        <section className="main_container">
+          <PlayersSection />
+          <GameBoard />
+        </section>
+        --INPUT LOG--
+      </GameManager>
     </main>
   )
 }
