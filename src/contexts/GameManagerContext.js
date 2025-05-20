@@ -5,6 +5,8 @@ export const GameManagerContext = createContext(
         currentPlayer: {},
         players: [],
         switchCurrentPlayer: ()=>{},
-        changePlayerName: (id = 0, newName = "")=>{}
+        changePlayerName: (id = 0, newName = "")=>{},
+        endGameSession: (gameWon = false, winnerId = 0)=>{},
+        restartGameSession: ()=>{}
     }
 );

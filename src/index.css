@@ -11,8 +11,10 @@
 
   --accent1-color: #ffe14d;
   --background: #1f1914;
+  --background-transparent: #1f1914e4;
   --text-dark: #1e1810;
   --text-light: #f8e7d2;
+  --disbled: #828282;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
