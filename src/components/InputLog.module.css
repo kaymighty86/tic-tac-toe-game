@@ -1,0 +1,10 @@
+.logsSection{
+    text-align: center;
+    font-size: small;
+    color: var(--text-dark);
+    padding-top: 1rem;
+}
+
+.logsSection>p{
+    margin: 0.2rem 0px;
+}

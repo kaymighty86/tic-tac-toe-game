@@ -1,7 +1,16 @@
 import Styles from "./InputLog.module.css";
 
-export default function InputLog({log = []}){
+import { useContext } from "react";
+import { GameManagerContext } from "../contexts/GameManagerContext";
+
+export default function InputLog(){
+    const {inputLogs, players} = useContext(GameManagerContext);
+
     return (
-        log.map((actions, id) => <p>Action Text</p>)
+        <section className={Styles.logsSection}>
+            {inputLogs.map((action, id) => 
+                <p key={id} >{`${players[action.playerId].name} played [${players[action.playerId].symbol}] at cell ${action.row},${action.col}`}</p>
+            )}
+        </section>
     );
 }

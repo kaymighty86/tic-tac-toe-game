@@ -28,7 +28,7 @@ export default function GameManager({children}){
     const [players, setPlayersData] = useState(defaultPlayers);
     const [currentPlayer, setCurrentPlayer] = useState(defaultPlayers[0]);
     const [playersInputs, updatePlayersInputs] = useState(defaultPlayersInputs);//array representing the map of the player inputs
-    const [inputLog, setInputLog] = useState([]);
+    const [inputLogs, setInputLogs] = useState([]);
     const [sessionEndState, setSessionEndState] = useState({
         winText: "",
         winnerName: "",
@@ -44,6 +44,19 @@ export default function GameManager({children}){
                 return currentInputs;
             });
 
+            //update the input logs
+            setInputLogs(prevLogs => {
+                const currLogs = prevLogs.map(log => ({...log}));
+                currLogs.push({
+                    playerId: currentPlayer.id,
+                    row: rowId,
+                    col: colId
+                });
+
+                return currLogs;
+            });
+
+            //switch player
             switchCurrentPlayer();
         }
     }
@@ -80,6 +93,7 @@ export default function GameManager({children}){
             winText: "",
             winnerName: "",
         });
+        setInputLogs([]);
     }
 
     const gameData = {
@@ -88,6 +102,7 @@ export default function GameManager({children}){
         switchCurrentPlayer,
         playersInputs,
         handlePlayerInput,
+        inputLogs,
         changePlayerName,
         endGameSession,
         restartGameSession,
