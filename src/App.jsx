@@ -3,6 +3,7 @@ import "./App.css";
 import PlayersSection from "./components/PlayersSection";
 import GameBoard from "./components/GameBoard";
 import GameManager from "./contexts/GameManager";
+import InputLog from "./components/InputLog";
 
 function App() {
 
@@ -13,7 +14,9 @@ function App() {
           <PlayersSection />
           <GameBoard />
         </section>
-        --INPUT LOG--
+        <section>
+          <InputLog />
+        </section>
       </GameManager>
     </main>
   )

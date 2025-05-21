@@ -2,13 +2,13 @@ import Styles from "./gameSessionEndModal.module.css";
 
 import Button from "../components/UI/Button";
 
-export default function GameSessionEndModal({headerText = "", winnerName}){
+export default function GameSessionEndModal({headerText = "", winnerName, handleRestart = ()=>{}}){
 
     return (
         <div className={Styles.gameEndModal}>
             <h1>{headerText}</h1>
-            <p>{`Winner: ${winnerName}`}</p>
-            <Button type="fill">Rematch!</Button>
+            {winnerName != "" && <p>{`${winnerName} won the game`}</p>}
+            <Button type="fill" onClick={handleRestart}>Rematch!</Button>
         </div>
     );
 }
