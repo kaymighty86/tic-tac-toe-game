@@ -2,6 +2,7 @@
     display: inline-block;
     padding: 0.2rem 1rem;
     box-sizing: border-box;
+    font-size: small;
 }
 
 .isEditable{
@@ -12,7 +13,6 @@
     width: 100%;
     height: 100%;
     padding: 0px;
-    font-size: small;
 }
 
 .editableText>p{
@@ -28,4 +28,10 @@
     outline: none;
     background-color: unset;
     color: white;
+}
+
+@media screen and (max-width: 1080px) {
+    .editableText{
+        padding: 0.1rem 0.5rem;
+    }
 }

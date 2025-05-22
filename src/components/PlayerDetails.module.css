@@ -3,20 +3,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0.35rem 1.2rem;
+    padding: 0.3rem 0.85rem;
+    font-size: medium;
     background-color: rgba(255, 209, 134, 0.1);
     box-sizing: border-box;
 }
 
 .playerDetails>p{
     margin: 0px;
-    height: fit-content;
+    /* height: fit-content; */
 }
 
 .playerDetails>button{
     border: none;
     height: fit-content;
     font-size: x-small;
+    text-decoration: underline;
     color: var(--accent1-color);
     background-color: unset;
 }
@@ -33,4 +35,27 @@
 .currentTurn{
     border: 2px solid var(--accent1-color);
     color: var(--accent1-color);
+}
+
+@media (max-width: 1080px)  {
+    .playerDetails{
+        font-size: x-small;
+        padding: 0.27rem 0.5rem;
+    }
+
+    .playerDetails>.editableText{
+        width: 5rem;
+        font-size: small;
+    }
+}
+
+@media (max-width: 500px)  {
+    .playerDetails{
+        font-size: xx-small;
+        padding: 0.2rem 0.3rem;
+    }
+
+    .playerDetails>.editableText{
+        font-size: x-small;
+    }
 }
